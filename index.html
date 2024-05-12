@@ -1,31 +1,241 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="styles.css">
-<title>Tienda de Cactus</title>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda de Cactus Shop</title>
+  <style>
+    /* Estilos existentes */
+    #nosotros {
+      background-color: #90ee90; /* Verde claro */
+      padding: 20px;
+      margin: 20px 0;
+    }
+    /* ... otros estilos ... */
+
+    /* Estilos para el formulario de contacto */
+    /* ... */
+
+    /* Estilos para la sección de productos */
+    #tienda {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .producto {
+      flex-basis: calc(33.333% - 20px); /* Ajusta este valor según el número de elementos que desees por fila */
+      margin: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .producto img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
 </head>
 <body>
-<header>
-  <h1>NODO</h1>
-  <nav>
-    <ul>
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#nosotros">Nosotros</a></li>
-      <li><a href="#tienda">Tienda</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-  </nav>
-</header>
+  <!-- El resto de tu HTML... -->
+</body>
+</html>
 
-<link rel="stylesheet" href="styles.css">
-<script src="scripts.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Tienda de Cactus Shop</title>
+  <style>
+
+    #nosotros {
+      background-color: #90ee90; /* Verde claro */
+      padding: 20px;
+      margin: 20px 0;
+    }
+    /* Estilos para el formulario de contacto */
+    form {
+      max-width: 300px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Cactus Shop</h1>
+   <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#tienda">Tienda</a></li>
+         <li><a href="#carrito">Carrito</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sección de Inicio -->
+  <section id="inicio">
+    <h2>Bienvenidos a Cactus Shop</h2>
+    <p>Explora nuestra colección única de cactus y suculentas.</p>
+  </section>
+
+  <!-- Sección de Nosotros -->
+  <section id="nosotros">
+    <h2>Sobre Nosotros</h2>
+    <p>Somos una tienda apasionada por los cactus y suculentas, ofreciendo las mejores plantas para decorar tu espacio con un toque de naturaleza.</p>
+  </section>
+
+  <!-- Sección de Tienda -->
+  <section id="tienda">
+    <h1>Nuestros Productos</h1>
+
+  <div class="producto" id="producto1">
+  <img src="imagenes/Cactus Espiral.jpeg" alt="Cactus Espiral">
+  <h3>Cactus Espiral</h3>
+  <p>Precio: $20.000</p>
+  <button onclick="agregarAlCarrito('producto1')">Agregar al Carrito</button>
+</div>
+   
+<div class="producto" id="producto2">
+  <img src="imagenes/Suculenta Azul.jpeg" alt="Suculenta Azul">
+  <h3>Suculenta Azul</h3>
+  <p>Precio: $20.000</p>
+  <button onclick="agregarAlCarrito('producto2')">Agregar al Carrito</button>
+</div>
+
+   <div class="producto" id="producto3">
+  <img src="imagenes/Suculenta Azul1.jpeg" alt="Suculenta Azul">
+  <h3>Suculenta Azul</h3>
+  <p>Precio: $20.000</p>
+  <button onclick="agregarAlCarrito('producto3')">Agregar al Carrito</button>
+</div>
+
+ <div class="producto" id="producto4">
+  <img src="imagenes/cactus2.jpg" alt="Cactus Florido">
+  <h3>Cactus Florido</h3>
+  <p>Precio: $20.000</p>
+  <button onclick="agregarAlCarrito('producto4')">Agregar al Carrito</button>
+</div>
+
+<div class="producto" id="producto5">
+  <img src="imagenes/cactus1.jpg" alt="Cactus Florido">
+  <h3>Cactus Florido</h3>
+  <p>Precio: $20.000</p>
+  <button onclick="agregarAlCarrito('producto5')">Agregar al Carrito</button>
+</div>
+
+<div class="producto" id="producto6">
+  <img src="imagenes/cactus2.jpg" alt="Cactus Florido">
+  <h3>Cactus Florido</h3>
+  <p>Precio: $20.000</p>
+  <button onclick="agregarAlCarrito('producto6')">Agregar al Carrito</button>
+</div>
+
+ <div class="producto" id="producto7">
+  <img src="imagenes/cactus4.jpg" alt="Cactus Florido">
+  <h3>Cactus Florido</h3>
+  <p>Precio: $20.000</p>
+  <button onclick="agregarAlCarrito('producto7')">Agregar al Carrito</button>
+</div>
+  
+ <div class="producto" id="producto8">
+  <img src="imagenes/cactus6.jpg" alt="Cactus Florido">
+  <h3>Cactus Florido</h3>
+  <p>Precio: $20.000</p>
+  <button onclick="agregarAlCarrito('producto8')">Agregar al Carrito</button>
+</div>
+
+ <div class="producto" id="producto9">
+  <img src="imagenes/cactus9.jpeg" alt="Cactus Florido">
+  <h3>Cactus Florido</h3>
+  <p>Precio: $20.000</p>
+  <button onclick="agregarAlCarrito('producto9')">Agregar al Carrito</button>
+</div>
 
 
+   <div id="contenedorCarrito"></div>
 
-<script src="scripts.js"></script>
-<link rel="stylesheet" href="styles.css">
-<script src="scripts.js"></script>
+    <!-- Continúa agregando productos de la misma manera -->
+  </section>
+
+  <!-- Sección de Cuidados -->
+  <section id="cuidados">
+    <h2>Cuidados</h2>
+    <!-- Consejos de cuidado -->
+  </section>
+
+
+<p> Consejos para mantener tus cactus y suculentas saludables Luz Solar
+Luz solar directa: Las suculentas y cactus prosperan con al menos 5 o 6 horas de luz solar directa al día.</p>
+
+<p> Adaptación gradual: Las plantas jóvenes deben ser introducidas gradualmente a la luz solar para evitar quemaduras.
+Temperatura </p>
+
+<p> Rango óptimo: La temperatura ideal para suculentas y cactus está entre 15 y 26 grados Celsius.</p>
+
+<p> Temperaturas bajas: Pueden sobrevivir hasta aproximadamente 4 grados Celsius, pero temperaturas cercanas a 0 pueden ser fatales.</p>
+
+<p> Temperaturas altas: La temperatura máxima tolerable es alrededor de 32 grados Celsius.</p>
+
+<p> Riego
+Moderación: Riega tus plantas regularmente, pero evita el exceso de agua.
+Suelo seco: Espera a que el suelo esté completamente seco antes de regar nuevamente.</p>
+
+<p> Suelo
+Bien drenado: Utiliza un sustrato que permita un drenaje adecuado para evitar el encharcamiento de las raíces.</p>
+Fertilización
+
+<p> Fertilizante específico: Usa fertilizantes diseñados para cactus y suculentas, siguiendo las instrucciones del fabricante.</p>
+Plagas y Enfermedades
+
+<p> Vigilancia: Mantente atento a signos de plagas o enfermedades y actúa rápidamente para tratarlas.</p>
+
+<p> Consejos Adicionales
+Macetas: Usa macetas anchas y poco profundas para permitir un buen desarrollo de las raíces.
+Trasplante: Realiza un trasplante anual para proporcionar un suelo fresco y nutriente. </p>
+
+  <!-- Sección de Contacto -->
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>¿Tienes preguntas? Contáctanos 3113476848 email cactushopnodo@gmail.com</p>
+    <!-- Formulario de contacto -->
+    <form action="procesar-contacto.php" method="post">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+      <input type="submit" value="Enviar">
+    </form>
+  </section>
+
+  <script src="scripts.js"></script>
+  <p>Creado por Juan Carlos Asprilla todos los derechos reservados 2024®</p>
 </body>
 </html>
