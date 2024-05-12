@@ -1,0 +1,14 @@
+<?php
+// Verificar si el formulario fue enviado
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Asignar los datos del formulario a variables
+    $nombre = $_POST['nombre'];
+    $email = $_POST['email'];
+    $mensaje = $_POST['mensaje'];
+
+    // Aquí puedes procesar los datos, como enviar un correo electrónico
+    $para = 'cactushopnodo@gmail.com'; // Dirección de correo donde quieres recibir los mensajes
+    $asunto = 'Nuevo mensaje de contacto';
+    $cuerpo_mensaje = "Has recibido un nuevo mensaje de contacto de: $nombre\n";
+    $cuerpo_mensaje .= "Correo electrónico: $email\n";
+    $cuerpo_mensaje .= "Mensaje:\n$mensaje";
